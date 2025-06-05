@@ -1,4 +1,4 @@
-⁶# Steps for Assignment
+# Steps for Assignment
 - Installed Postgresql and pgAdmin 4
 - Python3 and Jupyter Notebook
 # Part 1 SQL
