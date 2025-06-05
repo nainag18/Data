@@ -1,6 +1,6 @@
 # Steps for Assignment
-- Installed Postgresql and pgAdmin 4
-- Python3 and Jupyter Notebook
+- Install Postgresql and pgAdmin 4
+- Install Python3 and Jupyter Notebook
 # Part 1 SQL
 1.1 Query SQL Code for database and table creation
 - Created a user named 'admin' and database named 'test'. Granted all privileges to the 'admin' user to 'test' database
