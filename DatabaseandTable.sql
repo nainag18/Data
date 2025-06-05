@@ -9,6 +9,7 @@ create table spend (country_id integer, client varchar(255), year integer, month
 create table revenue (country varchar(2), client varchar(255), year integer, month integer, day integer, user_install_id UUID, revenue numeric(18,8));
 
 # Table Number of rows after importing csv files 
+Steps Right click on table and select Import/Export Data.. and choose right file according to table
 installs - rows 81752
 revenue - rows 2126539
 spend - rows 102
