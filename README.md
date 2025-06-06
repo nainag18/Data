@@ -15,3 +15,11 @@
 # Part 2 EDA
 In Python3 install libraries such as pandas matplotlib seaborn by using pip install command
 Check eda.ipynb for visualization and recommendations
+
+# Part 3 LTV
+Check ltv.ipynb for LTV prediction. Below is 
+**LTV Estimation Approach**
+- Used ARPI_D1 and ARPI_D14 from summary.csv for US users in Fruit Battle.
+- Fitted a linear regression to extrapolate ARPI to day 28 (assumed user lifetime).
+- Estimated LTV as ARPI_D28 from the regression.
+- Visualized the ARPI curve and regression fit.
