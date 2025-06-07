@@ -45,7 +45,7 @@ Check **ltv.ipynb** for visualization
 
 # Part 4. AB Testing
 
-Check **abtest.ipynb** for recommendations
+Check **abtesting.ipynb** for recommendations
 
 Explanation:
 - Calculates ARPI_D1 and D1 Retention rates for both groups.
