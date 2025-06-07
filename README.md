@@ -5,9 +5,19 @@
 **1.1 Query SQL Code for database and table creation**
 - Created a user named 'admin' and database named 'test'. Granted all privileges to the 'admin' user to 'test' database
 - Created 3 Tables - installs, revenue and spend
-- Load each CSV file into each table by right click on Import/Export Data... on table created. Example - On revenue table right click on Import/Export Data... Choose file name revenue and Click OK 
-- Refer **DatabaseandTable.sql** file for database and table creation
 
+Due to large file size and to avoid data loss, the **tableimport.ipynb** is used to import csv files and 
+convert to postgresql tables.
+
+### spend table
+- Total imported number of rows : 102
+
+### installs table
+
+- Total imported number of rows : 81752 
+### revenue table
+
+- Total imported number of rows : 2126539
   
 **1.2 Summary Table & SQL code**
 
