@@ -27,6 +27,7 @@ Check **summary.csv** file
 
 # Part 2 EDA
 In Python3 install libraries such as pandas matplotlib seaborn by using pip install command
+
 Check **eda.ipynb** for visualization and recommendations
 
 # Part 3 LTV prediction
