@@ -12,7 +12,7 @@
 **1.2 Summary Table & SQL code**
 
 
-Check summary.sql
+Check **summary.sql**
 
 #### We want all revenue events for a given installed user within 14 days after their install date. So in total revenue calculation which is used for ARPI_D[N], the revenue date is not filtered BETWEEN '2021-12-01' AND '2021-12-15'. 
 - That would exclude revenue for users who installed on 2021-12-15 but earned revenue on 2021-12-16 or later (which is within D14). 
@@ -23,7 +23,7 @@ Check summary.sql
 - If the data asked is between 1 dec and Dec 28th 2021 and revenue for next 14 days, then summary_alternative query would not work and only summary.sql works, as days substraction will give negative values.
 
 ## Section 1.2: Summary table - csv
-Check summary.csv file
+Check **summary.csv** file
 
 # Part 2 EDA
 In Python3 install libraries such as pandas matplotlib seaborn by using pip install command
@@ -31,7 +31,7 @@ Check **eda.ipynb** for visualization and recommendations
 
 # Part 3 LTV prediction
 
-Check ltv.ipynb for visualization
+Check **ltv.ipynb** for visualization
 
 **Approach**:
 - Load and filter data: Use summary.csv, filter for fruit_battle, country == US, and install dates between 2021-12-01 and 2021-12-15.
@@ -44,7 +44,7 @@ Check ltv.ipynb for visualization
 
 # Part 4. AB Testing
 
-Check abtest.ipynb for recommendations
+Check **abtest.ipynb** for recommendations
 
 Explanation:
 - Calculates ARPI_D1 and D1 Retention rates for both groups.
