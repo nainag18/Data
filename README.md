@@ -2,9 +2,9 @@
 - Install Postgresql and pgAdmin 4
 - Install Python3 and Jupyter Notebook
 # Part 1 SQL
-**1.1 Query SQL Code for database and table creation**
+**1.1 Query SQL Code for database and associated tables**
 - Created a user named 'admin' and database named 'test'. Granted all privileges to the 'admin' user to 'test' database
-- Created 3 Tables - installs, revenue and spend
+- For database creation- **Check DatabaseandTable.sql**
 
 Due to large file size and to avoid data loss, the **tableimport.ipynb** is used to import csv files and 
 convert to postgresql tables.
