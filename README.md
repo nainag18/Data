@@ -35,6 +35,8 @@ Check **Summary.sql**
 - It would cut off valid D1 and D14 revenue, especially toward the end of your install window. eg: 2021-12-15 → 2021-12-29 (D14)
 
 ### Summary2.sql  also works
+This SQL query calculates daily marketing performance metrics (like installs, ad spend, CPI, ARPI, and ROAS) by client and country from Dec 1 to Dec 15, 2021. It joins installs, spend, and revenue tables to compute user acquisition cost and revenue within 1 and 14 days of install.
+
 - As the days subtraction (revenue day - install day) doesn't lead to negative values  as the last day is Dec 15th and 14 days ahead is still in the same year 2021 and not extending to next month. 
 - If the data asked is between 1 Dec and Dec 28th 2021 and revenue for next 14 days, then summary_alternative query would not work and only summary.sql works, as days substraction will give negative values.
 
