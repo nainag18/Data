@@ -30,6 +30,8 @@ convert to postgresql tables.
 
 Check **Summary.sql**
 
+This query calculates metrics for install cohorts between December 1–15, 2021, grouped by client and country. It computes total installs, ad spend, and revenue on Day 1 and Day 14 using subqueries. Then it derives key KPIs like CPI, ARPI_D1/D14, and ROAS_D14 by joining the subqueries on install dates and client-country details.
+
 #### We want all revenue events for a given installed user within 14 days after their install date. So in total revenue calculation which is used for ARPI_D[N], the revenue date is not filtered BETWEEN '2021-12-01' AND '2021-12-15'. 
 - That would exclude revenue for users who installed on 2021-12-15 but earned revenue on 2021-12-16 or later (which is within D14). 
 - It would cut off valid D1 and D14 revenue, especially toward the end of your install window. eg: 2021-12-15 → 2021-12-29 (D14)
