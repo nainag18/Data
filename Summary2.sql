@@ -1,4 +1,4 @@
--- Part 1.2 This is 2nd SQL query to generate Summary table
+-- Part 1.2 Alternate Query -This is 2nd SQL query to generate Summary table
 SELECT
   i.client,
   i.country,
