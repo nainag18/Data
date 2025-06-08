@@ -32,11 +32,12 @@ Check **Summary.sql**
 
 This query calculates metrics for install cohorts between December 1–15, 2021, grouped by client and country. It computes total installs, ad spend, and revenue on Day 1 and Day 14 using subqueries. Then it derives key KPIs like CPI, ARPI_D1/D14, and ROAS_D14 by joining the subqueries on install dates and client-country details.
 
-#### We want all revenue events for a given installed user within 14 days after their install date. So in total revenue calculation which is used for ARPI_D[N], the revenue date is not filtered BETWEEN '2021-12-01' AND '2021-12-15'. 
-- That would exclude revenue for users who installed on 2021-12-15 but earned revenue on 2021-12-16 or later (which is within D14). 
-- It would cut off valid D1 and D14 revenue, especially toward the end of your install window. eg: 2021-12-15 → 2021-12-29 (D14)
+#### We want to capture all revenue events that occur within 14 days of a user's install date. Therefore, when calculating total revenue for ARPI_D[N], not restricting the revenue date to just '2021-12-01' to '2021-12-15'.
+- Filtering revenue by this range would exclude valid revenue from users who installed on '2021-12-15' but generated revenue on later dates, like '2021-12-16' or beyond but still within their 14-day window.
+- This would result in underreporting ARPI_D1 and ARPI_D14 metrics, particularly for users who installed near the end of the selected install period (e.g., Dec 15 installs would have D14 revenue up to Dec 29).
 
-### Summary2.sql  also works
+**Summary2.sql**  - Alternate Query
+
 This SQL query calculates daily marketing performance metrics (like installs, ad spend, CPI, ARPI, and ROAS) by client and country from Dec 1 to Dec 15, 2021. It joins installs, spend, and revenue tables to compute user acquisition cost and revenue within 1 and 14 days of install.
 
 - As the days subtraction (revenue day - install day) doesn't lead to negative values  as the last day is Dec 15th and 14 days ahead is still in the same year 2021 and not extending to next month. 
@@ -44,6 +45,8 @@ This SQL query calculates daily marketing performance metrics (like installs, ad
 
 
 Check **summary.csv** file for Summary Table
+
+ Summary table shows Ad Spend, Installs, CPI, ARPI_D1, ARPI_D14, and ROAS_D14 grouped by app (client), country, and install date.
 
 # Part 2 EDA
 In Python3 install libraries such as pandas matplotlib seaborn numpy by using pip install command
