@@ -13,7 +13,7 @@
           db: test
 
 Due to large file size and to avoid data loss, the **tableimport.ipynb** is used to import csv files and 
-convert to postgresql tables.
+convert to postgresql tables. It uses SQLAlchemy to connect to the database and pandas to handle the CSV reading and data insertion.
 
 ### spend table
 - Total imported number of rows : 102
