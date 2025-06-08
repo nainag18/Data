@@ -2,9 +2,15 @@
 - Install Postgresql and pgAdmin 4
 - Install Python3 and Jupyter Notebook
 # Part 1 SQL
-**1.1 Query SQL Code for database and associated tables**
+## Section 1.1: Query SQL Code for database and associated tables
 - Created a user named 'admin' and database named 'test'. Granted all privileges to the 'admin' user to 'test' database
 - For database creation- **Check DatabaseandTable.sql**
+
+          hostname: localhost
+          port: 5432
+          username: admin
+          password: admin
+          db: test
 
 Due to large file size and to avoid data loss, the **tableimport.ipynb** is used to import csv files and 
 convert to postgresql tables.
@@ -19,7 +25,7 @@ convert to postgresql tables.
 
 - Total imported number of rows : 2126539
   
-**1.2 Summary Table & SQL code**
+## Section 1.2: SQL code and Summary Table csv
 
 
 Check **summary.sql**
@@ -29,11 +35,11 @@ Check **summary.sql**
 - It would cut off valid D1 and D14 revenue, especially toward the end of your install window. eg: 2021-12-15 → 2021-12-29 (D14)
 
 ### summary2.sql  also works
-- as the days subtraction (revenue day - install day) doesn't lead to negative values  as the last day is Dec 15th and 14 days ahead is still in the same year 2021 and not extending to next month. 
-- If the data asked is between 1 dec and Dec 28th 2021 and revenue for next 14 days, then summary_alternative query would not work and only summary.sql works, as days substraction will give negative values.
+- As the days subtraction (revenue day - install day) doesn't lead to negative values  as the last day is Dec 15th and 14 days ahead is still in the same year 2021 and not extending to next month. 
+- If the data asked is between 1 Dec and Dec 28th 2021 and revenue for next 14 days, then summary_alternative query would not work and only summary.sql works, as days substraction will give negative values.
 
-## Section 1.2: Summary table - csv
-Check **summary.csv** file
+
+Check **summary.csv** file for Summary Table
 
 # Part 2 EDA
 In Python3 install libraries such as pandas matplotlib seaborn by using pip install command
@@ -51,7 +57,7 @@ Check **ltv.ipynb** for visualization
 - Extrapolate to predict overall ARPI at day 28, which serves as the estimated LTV.
 - Visualize: Plot ARPI over time and show the regression line extended to day 28 to visualize the LTV estimate.
 
-**Estimated LTV (ARPI_D28) for US: 0.528*
+ **Estimated LTV (ARPI_D28) for US: 0.528**
 
 # Part 4. AB Testing
 
