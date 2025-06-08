@@ -49,13 +49,17 @@ Check **summary.csv** file for Summary Table
  Summary table shows Ad Spend, Installs, CPI, ARPI_D1, ARPI_D14, and ROAS_D14 grouped by app (client), country, and install date.
 
 # Part 2 EDA
-In Python3 install libraries such as pandas matplotlib seaborn numpy by using pip install command
+In Jupyter Notebook install libraries such as pandas matplotlib seaborn numpy by using pip install command
 
 Check **eda.ipynb** for visualization and recommendations
+
+This script analyzes the top 3 countries for the Fruit Battle app by average ARPI_D14 within a specific install period, summarizing key metrics like installs, ad spend, ROAS, and CPI. It then visualizes these metrics over time and provides recommendations based on ROAS performance.
 
 # Part 3 LTV prediction
 
 Check **ltv.ipynb** for visualization
+
+This script loads Fruit Battle data for the US, calculates average ARPI on Day 1 and Day 14, and uses linear regression to estimate ARPI on Day 28 (LTV). It then visualizes ARPI progression and prints the estimated LTV value.
 
 **Approach**:
 - Load and filter data: Use summary.csv, filter for fruit_battle, country == US, and install dates between 2021-12-01 and 2021-12-15.
@@ -69,6 +73,8 @@ Check **ltv.ipynb** for visualization
 # Part 4. AB Testing
 
 Check **abtesting.ipynb** for recommendations
+
+This script calculates ARPI_D1 and Day 1 retention rates for control and test groups in an A/B test, then performs statistical tests to de check for significant differences. It computes effect sizes and power to evaluate if the sample size is adequate. Also, it summarizes the test results and gives rollout recommendations based on significance and power thresholds.
 
 Explanation:
 - Calculates ARPI_D1 and D1 Retention rates for both groups.
